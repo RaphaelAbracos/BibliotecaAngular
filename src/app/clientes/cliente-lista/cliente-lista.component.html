@@ -1,0 +1,19 @@
+<mat-accordion *ngIf="clientes.length > 0">
+  <mat-expansion-panel *ngFor="let cliente of clientes">
+    <mat-expansion-panel-header>
+      Id: {{ cliente.id }}
+    </mat-expansion-panel-header>
+    <p>
+      Titulo: {{ cliente.titulo }}
+    </p>
+    <p>
+      Autor: {{ cliente.autor }}
+    </p>
+    <p>
+      numero de paginas: {{ cliente.numeroPaginas }}
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-1" style="text-align: center" *ngIf="clientes.length <= 0">
+  Nenhum Livro cadastrado
+</p>
